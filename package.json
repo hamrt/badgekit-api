@@ -31,8 +31,8 @@
   "devDependencies": {
     "concat-stream": "~1.4.1",
     "form-data": "~0.1.2",
-    "jshint": "~2.3.0",
-    "tap": "~0.4.6"
+    "jshint": "~2.9.3",
+    "tap": "~7.1.2"
   },
   "homepage": "https://github.com/mozilla/badgekit-api",
   "repository": {
