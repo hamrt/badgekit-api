@@ -154,6 +154,7 @@ function verifyRequest() {
       return next(new http403('Could not decode JWT'))
     }
 
+    const parts = jws.decode(token)
     const auth = parts.payload
     if (!auth)
       return next(new http403('Missing JWT payload'))
@@ -199,7 +200,8 @@ function verifyRequest() {
 
     if (auth.key === 'master') {
       const masterSecret = process.env.MASTER_SECRET
-      if (!jws.verify(token, masterSecret))
+      const masterAlgorithm = process.env.ALGO_MASTER_SECRET                   
+      if (!jws.verify(token, masterAlgorithm,  masterSecret))
         return next(new http403('Invalid token signature'))
       return success()
     }
