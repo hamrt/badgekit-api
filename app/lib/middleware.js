@@ -191,6 +191,7 @@ function verifyRequest() {
       } catch (e) {
         return next(new http403('Could not calculate hash, unsupported algorithm: '+auth.body.alg))
       }
+      const computedHash = hash(auth.body.alg, req._body)
       if (givenHash !== computedHash)
         return next(new http403('Computed hash does not match given hash: '+givenHash+' != '+computedHash+''))
     }
