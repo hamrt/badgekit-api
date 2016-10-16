@@ -51,8 +51,7 @@ function confirmValidatorFunction (fn) {
   var args = Array.prototype.slice.call(arguments, 1);
 
   return function (value) {
-    var checker = validatorContext.check(value);
-    checker[validator].apply(checker, args);
+    validatorContext[validator](value.toString(),args);
   }
 }
 
