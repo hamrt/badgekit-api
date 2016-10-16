@@ -70,7 +70,7 @@ Applications.toResponse = function toResponse(row, request) {
 
 Applications.validateRow = makeValidator({
   id: optional('isInt'),
-  slug: required('len', 1, 255),
+  slug: required('isLength', 1, 255),
   badgeId: required('isInt'),
   learner: required('isEmail'),
   assignedTo: optional('isEmail'),
