@@ -153,7 +153,7 @@ Badges.validateRow = makeValidator({
   timeUnits: optional('isIn', ['minutes','hours','days','weeks']),
   limit: optional('isInt'),
   unique: required('isIn', ['0','1','true','false']),
-  criteriaUrl: required('isUrl'),
+  criteriaUrl: required('isURL'),
   evidenceType: optional('isIn', ['URL','Text','Photo','Video','Sound']),
   imageId: optional('isInt'),
   programId: optional('isInt'),
