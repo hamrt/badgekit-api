@@ -26,7 +26,7 @@ Criteria.toResponse = function toResponse(row) {
 
 Criteria.validateRow = makeValidator({
   id: optional('isInt'),
-  description: required('len', 1),
+  description: required('isLength', 1),
   required: required('isIn', ['0','1'])
 });
 
