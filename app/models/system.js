@@ -54,10 +54,10 @@ Systems.toResponse = function toResponse(row) {
 
 Systems.validateRow = makeValidator({
   id: optional('isInt'),
-  slug: required('len', 1, 255),
-  name: required('len', 1, 255),
+  slug: required('isLength', 1, 255),
+  name: required('isLength', 1, 255),
   url: required('isUrl'),
-  description: optional('len', 0, 255),
+  description: optional('isLength', 0, 255),
   email: optional('isEmail'),
   imageId: optional('isInt'),
 });
