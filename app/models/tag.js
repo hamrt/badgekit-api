@@ -22,7 +22,7 @@ Tags.toResponse = function toResponse(row) {
 
 Tags.validateRow = makeValidator({
   id: optional('isInt'),
-  value: required('len', 1)
+  value: required('isLength', 1)
 });
 
 exports = module.exports = Tags;
