@@ -144,11 +144,11 @@ function maybeObject(obj) {
 
 Badges.validateRow = makeValidator({
   id: optional('isInt'),
-  slug: required('len', 1, 255),
-  name: required('len', 1, 255),
-  strapline: optional('len', 0, 140),
-  earnerDescription: required('len', 1),
-  consumerDescription: required('len', 1),
+  slug: required('isLength', 1, 255),
+  name: required('isLength', 1, 255),
+  strapline: optional('isLength', 0, 140),
+  earnerDescription: required('isLength', 1),
+  consumerDescription: required('isLength', 1),
   timeValue: optional('isInt'),
   timeUnits: optional('isIn', ['minutes','hours','days','weeks']),
   limit: optional('isInt'),
