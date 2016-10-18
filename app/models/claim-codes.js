@@ -46,7 +46,7 @@ function maybeObject(obj) {
 
 ClaimCodes.validateRow = makeValidator({
   id: optional('isInt'),
-  code: required('len', 1),
+  code: required('isLength', 1),
   email: optional('isEmail'),
   badgeId: required('isInt'),
 })
