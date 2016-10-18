@@ -53,7 +53,7 @@ Reviews.toResponse = function toResponse(row) {
 
 Reviews.validateRow = makeValidator({
   id: optional('isInt'),
-  slug: required('len', 1, 255),
+  slug: required('isLength', 1, 255),
   applicationId: required('isInt'),
   author: required('isEmail')
 });
