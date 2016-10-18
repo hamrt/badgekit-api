@@ -26,7 +26,7 @@ Evidence.toResponse = function toResponse(row) {
 Evidence.validateRow = makeValidator({
   id: optional('isInt'),
   applicationId: required('isInt'),
-  url: optional('isUrl'),
+  url: optional('isURL'),
   mediaType: optional('isIn', ['image','link'])
 });
 
