@@ -31,7 +31,7 @@ const Images = db.table('images', {
 
 Images.validateRow = makeValidator({
   id: optional('isInt'),
-  slug: required('len', 1, 255),
+  slug: required('isLength', 1, 255),
   url: optional('isUrl'),
   mimetype: optional('is', /^[a-z]+\/\w+([-.]\w+)*(\+\w+)?$/i),
 });
