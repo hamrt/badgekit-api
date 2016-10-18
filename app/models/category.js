@@ -25,7 +25,7 @@ Category.toResponse = function toResponse(row) {
 Category.validateRow = makeValidator({
   id: optional('isInt'),
   badgeId: required('isInt'),
-  value: required('len', 1),
+  value: required('isLength', 1),
 });
 
 exports = module.exports = Category;
