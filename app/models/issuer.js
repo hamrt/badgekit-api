@@ -64,7 +64,7 @@ Issuers.validateRow = makeValidator({
   id: optional('isInt'),
   slug: required('isLength', 1, 255),
   name: required('isLength', 1, 255),
-  url: required('isUrl'),
+  url: required('isURL'),
   description: optional('isLength', 0, 255),
   email: optional('isEmail'),
   imageId: optional('isInt'),
