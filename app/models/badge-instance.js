@@ -55,7 +55,7 @@ BadgeInstances.toResponse = function toResponse(row, req) {
 BadgeInstances.validateRow = makeValidator({
   id: optional('isInt'),
   email: required('isEmail'),
-  claimCode: optional('len', 0, 255),
+  claimCode: optional('isLength', 1, 255),
   badgeId: required('isInt'),
 })
 
