@@ -26,9 +26,9 @@ Alignments.toResponse = function toResponse(row) {
 
 Alignments.validateRow = makeValidator({
   id: optional('isInt'),
-  name: required('Lenght', 1),
+  name: required('isLenght', 1),
   url: required('isURL'),
-  description: required('Length', 1)
+  description: required('isLength', 1)
 });
 
 exports = module.exports = Alignments;
